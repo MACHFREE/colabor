@@ -1,0 +1,23 @@
+# Dolibarr language file - es_ES - Colabor BOUSTENS
+CHARSET=UTF-8
+
+ColaborSetupPage = Configuración de módulo Colabor
+ColaborAboutPage = Acerca de Colabor
+
+NewPerformance = Nueva anotación
+InsertNewPerformance =  Ingresar nueva anotación
+EditPerformance = Editar anotación
+ColaborCreate =  Registro guardado correctamente
+ColaborUpdate =  Registro actualizado correctamente
+ColaborDelete = Registro eliminado
+
+ErrorCreateColabor = Error al guardar el registro
+ErrorDeleteColabor = Error al eliminar el registro
+ColaborHistor = Historial de anotaciones
+Colaborerror = Debe ingresar la descripción
+DeleteHistorytLine = Eliminar línea del historial
+ConfirmDeleteHistoryLine = ¿Está seguro de querer eliminar esta línea del historial?
+ColaborSetupPage = Configuracion módulo colabor
+MentionsLabel = Menciones
+MentionsPlaceholder = Buscar usuario, contacto o documento...
+TypeAnnotation = Tipo de anotación

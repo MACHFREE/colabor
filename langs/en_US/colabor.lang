@@ -1,0 +1,20 @@
+# Dolibarr language file - en_US - Colabor BOUSTENS
+CHARSET=UTF-8
+
+ColaborSetupPage = Collabor module configuration.
+ColaborAboutPage = About Collabor.
+
+NewPerformance = New Performance
+InsertNewPerformance =  Enter New Performance.
+EditPerformance = Edit Performance.
+ColaborCreate =  Successfully saved record.
+ColaborUpdate =  Registry Updated Correctly.
+ColaborDelete = Record removed.
+
+ErrorCreateColabor = Failed to save the record.
+ErrorDeleteColabor = Failed to delete the record.
+ColaborHistor = Stock history.
+Colaborerror = You must enter the description.
+DeleteHistorytLine = Delete history line.
+ConfirmDeleteHistoryLine = ¿You are sure you want to delete this line from the history?.
+ColaborSetupPage = Collaborator module configuration

@@ -1,0 +1,26 @@
+SELECT  p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid
+
+SELECT  p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid
+
+
+SELECT   p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep, co.datec FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se INNER JOIN llx_colabor as co WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid and co.fk_element = p.rowid GROUP by p.rowid ORDER BY co.datec DESC   
+
+
+SELECT   p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep, co.datec, u.lastname FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se INNER JOIN llx_colabor as co INNER JOIN llx_user as u WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid and co.fk_element = p.rowid and u.rowid=co.fk_user_create ORDER BY co.datec DESC
+
+
+SELECT DISTINCT  p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep, (select MAX(co.datec) FROM llx_colabor as co WHERE co.fk_element=p.rowid) as fecha_accion  FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se INNER JOIN llx_user as u WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid
+
+SELECT DISTINCT  p.rowid, p.ref, p.title, s.nom, se.datenac, pe.numexp, pe.datep, (select MAX(co.datec) FROM llx_colabor as co WHERE co.fk_element=p.rowid) as fecha_accion  FROM llx_projet as p  INNER JOIN llx_projet_extrafields as pe INNER JOIN llx_societe as s  INNER JOIN llx_societe_extrafields as se INNER JOIN llx_user as u WHERE p.rowid = pe.fk_object and s.rowid = p.fk_soc and se.fk_object=s.rowid
+
+
+ SELECT DISTINCT co.fk_element, co.fk_ref, pr.rowid, pr.title, (SELECT MAX(co.fk_user_create) FROM llx_colabor as co WHERE co.fk_element=pr.rowid GROUP BY co.fk_element) as user FROM llx_colabor as co INNER JOIN llx_projet as pr where co.fk_element =pr.rowid GROUP by co.fk_element, co.fk_ref, pr.title, user ORDER BY co.fk_element DESC
+
+
+SELECT DISTINCT pr.rowid, pr.ref, pr.title, pr.fk_soc, (select MAX(co.datec) FROM llx_colabor as co WHERE co.fk_element=pr.rowid) as fecha_accion, (SELECT MAX(co.fk_user_create) FROM llx_colabor as co WHERE co.fk_element=pr.rowid GROUP BY co.fk_element) as user FROM llx_colabor as co INNER JOIN llx_projet as pr where co.fk_element =pr.rowid GROUP by pr.rowid, pr.ref, pr.title, user ORDER BY fecha_accion DESC
+
+
+SELECT DISTINCT  pr.rowid , pr.ref, (select MAX(co.datec) FROM llx_colabor as co WHERE co.fk_element=pr.rowid) as fecha_accion, (SELECT MAX(co.rowid) FROM llx_colabor as co WHERE co.fk_element=pr.rowid GROUP BY co.fk_element) as crowid FROM llx_colabor as co INNER JOIN llx_projet as pr where co.fk_element =pr.rowid GROUP by pr.rowid, pr.ref, crowid ORDER BY fecha_accion DESC
+
+SELECT DISTINCT pr.rowid , (select MAX(co.datec) FROM llx_colabor as co WHERE co.fk_element=pr.rowid) as fecha_accion, (SELECT MAX(co.rowid) FROM llx_colabor as co WHERE co.fk_element=pr.rowid GROUP BY co.fk_element) as crowid FROM llx_colabor as co INNER JOIN llx_projet as pr where co.fk_element =pr.rowid GROUP by pr.rowid, crowid ORDER BY fecha_accion DESC
+

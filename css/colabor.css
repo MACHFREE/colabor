@@ -1,0 +1,562 @@
+
+
+div.titre {
+
+   	text-align: left;
+	display: block;
+}
+
+.usercol{
+text-align: left;
+width: 12%;
+}
+
+.datecol{
+text-align: center;
+width: 10%;
+}
+
+.contencol{
+text-align: left;
+width: 70%;
+}
+
+.icon{
+	width: 10%;
+	align-content: left;
+}
+
+
+#buttoncola{
+
+	background:#25A580;
+	color: #444;
+}
+
+
+#fixedtipdiv{
+position:absolute;
+padding: 2px;
+border:1px solid #e5e5e5;
+
+-webkit-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1);
+-moz-box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1);
+box-shadow: 0px 0px 3px 2px rgba(0,0,0,0.1);
+
+font:normal 12px Verdana;
+line-height:18px;
+z-index:100;
+}
+
+.oddeven1{
+	background: #ff5656;
+	color: #fff;
+	font-weight: bold;
+}
+
+.oddeven1 a{
+	background: #ff5656;
+	color: #003f7f;
+	font-weight: bold;
+}
+
+
+
+
+
+/*Css para button encendido */
+
+
+
+:root {
+                --color-green: rgba(0,123,140,1);
+                --color-red: #829082;
+                --color-button: #fdffff;
+                --color-black: #000;
+            }
+            .switch-button {
+                display: inline-block;
+            }
+            .switch-button .switch-button__checkbox {
+                display: none;
+            }
+            .switch-button .switch-button__label {
+                background-color: var(--color-red);
+                width: 2rem;
+                height: 1.5rem;
+                border-radius: 1rem;
+                display: inline-block;
+                position: relative;
+            }
+            .switch-button .switch-button__label:before {
+                transition: .2s;
+                display: block;
+                position: absolute;
+                width: 1.2rem;
+                height: 1.2rem;
+                background-color: var(--color-button);
+                content: '';
+                border-radius: 25%;
+                box-shadow: inset 0px 0px 0px 1px var(--color-black);
+            }
+            .switch-button .switch-button__checkbox:checked + .switch-button__label {
+                background-color: var(--color-green);
+            }
+            .switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+                transform: translateX(1rem);
+            }
+
+
+
+
+
+
+/**/
+
+.tooltip-colabor {
+    cursor: help;
+    border-bottom: 1px dotted #999;
+}
+
+.tooltip-box {
+    position: fixed;
+    background: #333;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 4px;
+    font-size: 13px;
+    max-width: 300px;
+    z-index: 10000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    word-wrap: break-word;
+}
+
+.tooltip-box strong {
+    color: #fff;
+}
+
+.tooltip-box em {
+    color: #ddd;
+    font-style: italic;
+}
+
+/* ============================================================
+   MENTIONS SYSTEM - Colabor
+   ============================================================ */
+
+.colabor-mentions-section {
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.colabor-mentions-section > label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    color: #888;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Search input */
+#colabor-mention-wrapper {
+    position: relative;
+}
+
+#colabor-mention-input {
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+#colabor-mention-input:focus {
+    border-color: #25A580;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(37,165,128,0.15);
+}
+
+/* Dropdown */
+#colabor-mention-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+    z-index: 9999;
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.colabor-mention-opt {
+    display: flex;
+    align-items: center;
+    padding: 7px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    gap: 7px;
+    transition: background 0.1s;
+}
+
+.colabor-mention-opt:hover,
+.colabor-mention-opt.active {
+    background: #e8f8f4;
+}
+
+.colabor-mention-opt .m-icon {
+    font-size: 14px;
+    width: 20px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.colabor-mention-opt .m-label {
+    font-weight: 600;
+    color: #333;
+    flex-shrink: 0;
+}
+
+.colabor-mention-opt .m-sub {
+    font-size: 11px;
+    color: #888;
+    margin-left: auto;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.colabor-mention-opt .m-type {
+    color: #aaa;
+    font-style: normal;
+}
+
+.colabor-mention-opt .m-login {
+    color: #666;
+}
+
+.colabor-mention-empty {
+    padding: 10px 14px;
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+}
+
+/* Badges container (form) */
+#colabor-mentions-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+/* Single badge */
+.colabor-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px 3px 7px;
+    background: #e0f3ef;
+    border: 1px solid #25A580;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #1a7a5e;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+
+.colabor-badge .m-badge-sub {
+    color: #5aab90;
+    font-size: 11px;
+}
+
+.colabor-badge-rm {
+    color: #7cc;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.colabor-badge-rm:hover {
+    color: #c00;
+    text-decoration: none;
+}
+
+/* Mentions row in history */
+.colabor-mentions-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-top: 7px;
+    padding-top: 6px;
+    border-top: 1px dashed #e8e8e8;
+}
+
+.colabor-mentions-row-label {
+    font-size: 11px;
+    color: #aaa;
+    margin-right: 2px;
+    white-space: nowrap;
+}
+
+/* Mention link (history display) */
+.colabor-mention-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 2px 8px;
+    background: #e0f3ef;
+    border: 1px solid #25A580;
+    border-radius: 10px;
+    font-size: 11px;
+    color: #1a7a5e;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.12s;
+}
+
+.colabor-mention-link:hover {
+    background: #c5eae1;
+    color: #0e5039;
+    text-decoration: none;
+}
+
+/* User badge variant (blue) */
+.colabor-mention-link.is-user {
+    background: #e8f0fe;
+    border-color: #5b8dee;
+    color: #2c5cc5;
+}
+
+.colabor-mention-link.is-user:hover {
+    background: #d0e2fd;
+    color: #1a3d8f;
+    text-decoration: none;
+}
+
+/* Product badge (orange) */
+.colabor-mention-link.is-product {
+    background: #fff3e0;
+    border-color: #FF9800;
+    color: #e65100;
+}
+
+.colabor-mention-link.is-product:hover {
+    background: #ffe0b2;
+    color: #bf360c;
+    text-decoration: none;
+}
+
+/* Service badge (cyan) */
+.colabor-mention-link.is-service {
+    background: #e0f7fa;
+    border-color: #00BCD4;
+    color: #006064;
+}
+
+.colabor-mention-link.is-service:hover {
+    background: #b2ebf2;
+    color: #004d40;
+    text-decoration: none;
+}
+
+/* Branch badge (brown) */
+.colabor-mention-link.is-branch {
+    background: #efebe9;
+    border-color: #795548;
+    color: #4e342e;
+}
+
+.colabor-mention-link.is-branch:hover {
+    background: #d7ccc8;
+    color: #3e2723;
+    text-decoration: none;
+}
+
+/* ============================================================
+   MENTION TOKENS — estilos para <span class="mention"> en editor
+   (también inyectados en el iframe de CKEditor vía JS)
+   ============================================================ */
+
+.mention {
+    background: #e3f2fd;
+    border: 1px solid #2196F3;
+    border-radius: 4px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    cursor: default;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 0.92em;
+    line-height: 1.6;
+    vertical-align: middle;
+}
+
+.mention:hover {
+    opacity: .85;
+}
+
+.mention[data-type="user"] {
+    border-color: #4CAF50;
+    background: #f1f8e9;
+    color: #2e7d32;
+}
+
+.mention[data-type="contact"] {
+    border-color: #FF9800;
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.mention[data-type="propal"],
+.mention[data-type="commande"],
+.mention[data-type="facture"],
+.mention[data-type="shipment"],
+.mention[data-type="reception"] {
+    border-color: #9C27B0;
+    background: #f3e5f5;
+    color: #6a1b9a;
+}
+
+.mention[data-type="project"] {
+    border-color: #E91E63;
+    background: #fce4ec;
+    color: #880e4f;
+}
+
+.mention[data-type="product"] {
+    border-color: #FF9800;
+    background: #fff3e0;
+    color: #e65100;
+}
+
+.mention[data-type="service"] {
+    border-color: #00BCD4;
+    background: #e0f7fa;
+    color: #006064;
+}
+
+.mention[data-type="branch"] {
+    border-color: #795548;
+    background: #efebe9;
+    color: #4e342e;
+}
+
+/* ============================================================
+   EDITOR VISUAL CONTENTEDITABLE (reemplaza textarea)
+   ============================================================ */
+
+.colabor-visual-editor {
+    min-height: 100px;
+    width: 100%;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: inherit;
+    line-height: 1.6;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+    overflow-y: auto;
+    resize: vertical;
+    word-wrap: break-word;
+    outline: none;
+    cursor: text;
+    text-align: left;
+    vertical-align: top;
+}
+
+.colabor-visual-editor:focus {
+    border-color: #25A580;
+    box-shadow: 0 0 0 2px rgba(37,165,128,0.15);
+}
+
+/* Tokens dentro del editor visual: no seleccionables como texto */
+.colabor-visual-editor .mention {
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: default;
+    vertical-align: middle;
+}
+
+/* ============================================================
+   HTML TOOLTIP FOR EDITED ANNOTATIONS
+   ============================================================ */
+
+.colabor-tip-trigger {
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+    color: #aaa;
+    font-size: 13px;
+    vertical-align: middle;
+    transition: color 0.15s;
+}
+
+.colabor-tip-trigger:hover {
+    color: #25A580;
+}
+
+.colabor-tip-box {
+    display: none;
+    position: fixed;
+    z-index: 10500;
+    background: #fff;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.14);
+    max-width: 440px;
+    min-width: 240px;
+    font-size: 13px;
+    line-height: 1.55;
+    overflow: hidden;
+    pointer-events: auto;
+}
+
+.colabor-tip-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 12px 6px;
+    background: #f5f7f9;
+    border-bottom: 1px solid #e8ecf0;
+    gap: 10px;
+}
+
+.colabor-tip-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.colabor-tip-date {
+    font-size: 11px;
+    color: #999;
+    font-style: italic;
+    white-space: nowrap;
+}
+
+.colabor-tip-content {
+    padding: 10px 12px;
+    color: #333;
+    word-wrap: break-word;
+    max-height: 260px;
+    overflow-y: auto;
+}
