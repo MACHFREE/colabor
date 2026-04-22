@@ -17,7 +17,7 @@
 3.  Ve a **Configuración -> Módulos**, busca "Colabor" y actívalo.
 
 ## 📋 Requisitos
-* **Dolibarr:** v14 o superior (Probado hasta v19).
+* **Dolibarr:** v18 o superior (Probado hasta v22).
 * **PHP:** 7.4 o superior.
 
 ## 🤝 Contribuciones
